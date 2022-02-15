@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReCharge Dashboard</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://use.fontawesome.com/141fd028ea.js"></script>
+    <!-- Bootstrap CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style type="text/css">
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/dashbaordstyles.css">
+</head>
+
+<body>
+    <!-- Main page starts -->
+    <!-- Container for full page started -->
+    <div class="container-fluid bg-light">
+        <!-- row for full page started -->
+        <div class="row">
+            <!--sidepanel col from a full width container -->
+            <div class="col-sm-12 col-lg-2 col-md-3 bg-dark justify-content-left pt-0 pb-0 pr-0 sidepanel">
+                <!-- side bar profile info -->
+                <div class="text-center mt-3">
+                    <!-- profile info ens -->
+                    <!-- sidebar nav -->
+                    <div class="sidenavg">
+                        <img src="images/profile.jfif" class="img-fluid rounded-circle img-icon">
+                        <h5 class="text-light mt-2 ">Moheed-Gillani</h5>
+                        <p class="text-muted  ">ID-ABC12345<br>Member Since <br>Febuary 2022</</p>
+                            <ul class="nav flex-column text-left navtabs " id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link  active text-light tbtext tabsp" id="Summary-tab" data-toggle="tab" href="#Summary" role="tab" aria-controls="Summary" aria-selected="False">
+                                        <img src="images/sidebar-icons/blocks.png" class="side-bar-icon">
+                                        <span class="ml-3">Summary</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link text-light tbtext" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="True">
+                                        <img src="images/sidebar-icons/user.png" class="side-bar-icon">
+                                        <span class="ml-3 tbtext">Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link text-light tbtext" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="True">
+                                        <img src="images/sidebar-icons/edit.png" class="side-bar-icon">
+                                        <span class="ml-3">Account</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link text-light tbtext" id="transaction-tab" data-toggle="tab" href="#transaction" role="tab" aria-controls="account" aria-selected="True">
+                                        <img src="images/sidebar-icons/arrows.png" class="side-bar-icon">
+                                        <span class="ml-3">Transactions</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link text-light tbtext" id="reward-tab" data-toggle="tab" href="#reward" role="tab" aria-controls="reward" aria-selected="True">
+                                        <img src="images/sidebar-icons/gifts.png" class="side-bar-icon">
+                                        <span class="ml-3">Rewards</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link text-light tbtext" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="True">
+                                        <img src="images/sidebar-icons/paydome.png" class="side-bar-icon">
+                                        <span class="ml-3">PayDome</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- side bar nav ends here -->
+                    </div>
+                </div>
+            </div>
+            <!--sidepanel col from a full width container -->
+            <!-- dashboard panel column-->
+            <div class="col-sm-12 col-lg-10 col-md-9 dashboard">
+                <!-- summary tab section -->
+                <!-- navingation of dashobaord started -->
+                <nav class="navbar  bg-nav navbar-expand-lg navbar-light ">
+                    <a class="navbar-brand" href="#"><img src="images/logo2.png" width="150px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto ">
+                            <li class="nav-item ">
+                                <a class="nav-link mr-4 text-dark " href="#">What we do? <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-4 text-dark" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-4 text-dark" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link  mr-4 text-light rounded-circle text-center iconlink " href="#">
+                                    <img src="images/noti.svg" class="log-out fa" style="width:20px;">
+
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link mr-4 text-light rounded-circle text-center iconlink" href="#">
+                                    <img src="images/waqas.svg" class="log-out fa">
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#"><img src="images/profile.jfif" class="img-fluid rounded-circle picon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation of sidebar dashboard ended -->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="Summary" role="tabpanel" aria-labelledby="Summary-tab">
+
+
+
+                        <div class="row protabsum">
+                            <div class="col-auto mr-auto">
+                                <h5 class="p-3">Last 30 days</h5>
+                            </div>
+                            <div class="col-auto">
+                                <li class="nav-item dropdown" style="list-style: none;">
+                                    <img src="images/down-arrow.svg" class="p-3 ml-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">1 Week</a>
+                                        <a class="dropdown-item" href="#">2 Week </a>
+                                        <a class="dropdown-item" href="#">3 week</a>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                        <!--First row of dashboard-->
+                        <div class="row mt-5 rounded threesection">
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="chart-container doughnut">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-12 col-sm-12">
+                                <!-- table  -->
+                                <table class="table mt-5 table-responsive-sm ">
+                                    <thead style="background-color:#36B8E2" class="text-light">
+                                        <tr>
+                                            <th scope="col" class="ml-1">Categories</th>
+                                            <th scope="col">Allocation</th>
+                                            <th scope="col">Change</th>
+                                            <th scope="col">Amounts</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="th"><i class="fa fa-circle text-danger  ml-1" aria-hidden="true"></i> Electricity</th>
+                                            <td>40.7%</td>
+                                            <td><i class="fa fa-caret-up text-success " aria-hidden="true"></i> 1.5%
+                                            </td>
+                                            <td>Rs 1049.48</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="th"><i class="fa fa-circle text-warning ml-1" aria-hidden="true"></i> Mobile</th>
+                                            <td>32.2%</td>
+                                            <td><i class="fa fa-caret-down text-danger" aria-hidden="true"></i> 1.2%
+                                            </td>
+                                            <td>Rs 488.90</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="th"><i class="fa fa-circle text-success ml-1" aria-hidden="true"></i> Education</th>
+                                            <td>10.1%</td>
+                                            <td><i class="fa fa-caret-up text-success" aria-hidden="true"></i> 3.3%
+                                            </td>
+                                            <td>Rs 147.87</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="th"><i class="fa fa-circle text-primary ml-1" aria-hidden="true"></i> Gas</th>
+                                            <td>10.1%</td>
+                                            <td><i class="fa fa-caret-down text-danger" aria-hidden="true"></i> 3.3
+                                            </td>
+                                            <td>Rs 567.45</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="th"><i class="fa fa-circle text-danger ml-1" aria-hidden="true"></i> Others</th>
+                                            <td> 0.5%</td>
+                                            <td><i class="fa fa-caret-down text-success" aria-hidden="true"></i> 3.3
+                                            </td>
+                                            <td> Rs 789.69</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- table end -->
+                            </div>
+                            <hr style="width:80%;">
+                            <!-- Second row of dashboard started section -->
+                            <div class="row mt-0 rounded threesection">
+                                <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                    <div class="text-center mt-5">
+                                        <img src="images/user-hover.svg" width="50">
+                                        <h5 class="mt-1">Log in sessions</h5>
+                                        <h6 class="text-muted" style="font-weight:initial;">27 sessions <br> Last login in: <br>2-/04/2021</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-sm-12 3">
+                                    <div class="text-center mt-5">
+                                        <img src="images/wallet-hover.svg" width="50">
+                                        <h5>Payments</h5>
+                                        <h6 class=" text-muted" style="font-weight:initial;">Rs 123,000 <br> Last Payment <br>2-/04/2021</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                    <div class="text-center mt-5">
+                                        <img src="images/payment-method.png" width="50">
+
+                                        <h5>Payment methods</h5>
+                                        <h6 class="text-muted" style="font-weight:initial;">Bank transfer<br> RS 123,000 <br> Visa Rs 80000 <br>Union Pay Rs 30,000</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- First row of dashboard ends here end -->
+                        </div>
+                        <!-- 3rd section -->
+                        <div class="row mt-5 rounded threesection">
+                            <div class="col-12 mt-2 pt-3 ml-2">
+                                <nav>
+                                    <div class="nav " id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active  text-dark" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa fa-circle text-primary" aria-hidden="true"></i>
+                                        Payment Last Year</a>
+                                        <a class="nav-item nav-link text-dark" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                            <i class="fa fa-circle text-success" aria-hidden="true"></i> Payment This Year</a>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="col-12">
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                        <img src="images/chart.png" width="100%" height="250px">
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                        <img src="images/chart.png" width="100%" height="250px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- profile tab section -->
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                        <div class="row protabsum">
+
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <ul class="nav nav-fill justify-content-center" role="presentation">
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="personalinfo-tab" data-toggle="tab" href="#personalinfo" role="tab" aria-controls="personalinfo" aria-selected="true">Personal information</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="physicaladdress-tab" data-toggle="tab" href="#physicaladdress" role="tab" aria-controls="physicaladdress" aria-selected="true">Physical address</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="postalinfo-tab" data-toggle="tab" href="#postalinfo" role="tab" aria-controls="postalinfo" aria-selected="true">Postal address</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link  suma" id="idinfo-tab" data-toggle="tab" href="#idinfo" role="tab" aria-controls="idinfo" aria-selected="true">ID/Security information</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row  protabsum">
+                            <div class="row protabsum mt-1">
+                                <div class="col-12">
+                                    <!-- content form strated -->
+                                    <div class="tab-content" id="myTabContent">
+                                        <!-- personal info form tab -->
+                                        <div class="tab-pane fade show active" id="personalinfo" role="tabpanel" aria-labelledby="personalinfo-tab">
+                                            <!-- form row started -->
+                                            <!-- <div class="row protabsum mt-1"> -->
+                                            <div class="row d-flex justify-content-between protabsum w-100">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-1 p-1">
+                                                    <h4>Personal information</h4>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 text-right mt-1 p-1 d-xl-block d-md-none d-lg-block d-sm-none">
+                                                    <i class="fa fa-pencil-square text-muted" aria-hidden="true"></i>
+                                                </div>
+                                                <hr style="width:100%;" class="mt-0">
+                                            </div>
+                                            <form class="mt-0">
+                                                <div class="form-row" style="margin-top: -35px;">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputEmail4">Name</label>
+                                                        <input type="email" class="form-control ud-inputs" id="inputEmail4" placeholder="Syed Moheed ul Hussan Gillani">
+                                                    </div>
+                                                    <div class="form-group  form-group-lg col-md-6">
+                                                        <label for="inputPassword4">Email</label>
+                                                        <input type="password" class="form-control ud-inputs" id="inputPassword4" placeholder="moheedgillani@webdeveloper.com">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputEmail4">Mobile number</label>
+                                                        <input type="email" class="form-control ud-inputs" id="+923414148482" placeholder="+923414148482">
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputPassword4">Alternative number</label>
+                                                        <input type="password" class="form-control ud-inputs" id="+923414148482" placeholder="+923414148482">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- personal info form tab ended-->
+                                        <!-- physical address form -->
+
+                                        <div class="tab-pane fade" id="physicaladdress" role="tabpanel" aria-labelledby="physicaladdress-tab">
+                                            <div class="row d-flex justify-content-between protabsum w-100">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-1 p-1">
+                                                    <h4>Physical address</h4>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 text-right mt-1 p-1 d-xl-block d-md-none d-lg-block d-sm-none">
+                                                    <i class="fa fa-pencil-square text-muted" aria-hidden="true"></i>
+                                                </div>
+                                                <hr style="width:100%;" class="mt-0">
+                                            </div>
+                                            <form class="mt-0">
+                                                <div class="form-row" style="margin-top: -35px;">
+                                                    <div class="form-group form-group-lg col-12">
+                                                        <label for="exampleInputEmail1">Address 1</label>
+                                                        <input type="email" class="form-control ud-inputs" id="exampleInputEmail1" placeholder="882 broadway Avenue">
+
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-12">
+                                                        <label for="exampleInputPassword1">Address 2</label>
+                                                        <input type="password" class="form-control ud-inputs" id="exampleInputPassword1" placeholder="992 Stalk Hallow Road">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputPassword4">Country</label>
+                                                        <select class=" custom-select-dropdown  form-control" id="inputPassword4">
+                                                <option>Pakistan</option>
+                                                <option>India</option>
+                                                <option>Turkey</option>
+                                                <option>China</option>
+                                                </select>
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputEmail4">City/Town/Suburb</label>
+                                                        <input type="email" class="form-control ud-inputs" id="inputEmail4" placeholder="Rawalpindi">
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="form-row">
+
+                                                    <div class="form-group  form-group-lg col-md-6">
+                                                        <label for="inputPassword4">State/Province</label>
+                                                        <input type="password" class="form-control ud-inputs" id="inputPassword4" placeholder="Punjab">
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputEmail4">Postal code </label>
+                                                        <input type="email" class="form-control ud-inputs" id="+923414148482" placeholder="46000">
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- personal info form tab ended-->
+                                        <div class="tab-pane fade" id="postalinfo" role="tabpanel" aria-labelledby="postalinfo-tab">
+                                            <div class="row d-flex justify-content-between protabsum w-100">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-1 p-1">
+                                                    <h4>Postal address</h4>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 text-right mt-1 p-1 d-xl-block d-md-none d-lg-block d-sm-none">
+                                                    <i class="fa fa-pencil-square text-muted" aria-hidden="true"></i>
+                                                </div>
+                                                <hr style="width:100%;" class="mt-0">
+                                            </div>
+                                            <form class="mt-0">
+                                                <div class="form-row" style="margin-top: -35px;">
+                                                    <div class="form-group form-group-lg col-12">
+                                                        <label for="exampleInputEmail1">Address 1</label>
+                                                        <input type="email" class="form-control ud-inputs" id="exampleInputEmail1" placeholder="882 broadway Avenue">
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-12">
+                                                        <label for="exampleInputPassword1">Address 2</label>
+                                                        <input type="password" class="form-control ud-inputs" id="exampleInputPassword1" placeholder="992 Stalk Hallow Road">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputPassword4">Country</label>
+                                                        <select class="form-control custom-select-dropdown" id="inputPassword4">
+                                                        <option>Pakistan</option>
+                                                        <option>India</option>
+                                                        <option>Turkey</option>
+                                                        <option>China</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputEmail4">City/Town/Suburb</label>
+                                                        <input type="email" class="form-control ud-inputs" id="inputEmail4" placeholder="Rawalpindi">
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group  form-group-lg col-md-6">
+                                                        <label for="inputPassword4">State/Province</label>
+                                                        <input type="password" class="form-control ud-inputs" id="inputPassword4" placeholder="Punjab">
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="inputEmail4">Postal code</label>
+                                                        <input type="email" class="form-control ud-inputs" id="+923414148482" placeholder="46000">
+                                                    </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- postal address form -->
+                                        <!-- Id form tab ended-->
+                                        <div class="tab-pane fade" id="idinfo" role="tabpanel" aria-labelledby="idinfo-tab">
+                                            <div class="row d-flex justify-content-between protabsum w-100">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-1 p-1">
+                                                    <h4>ID/Security information</h4>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 text-right mt-1 p-1 d-xl-block d-md-none d-lg-block d-sm-none">
+                                                    <i class="fa fa-pencil-square text-muted" aria-hidden="true"></i>
+                                                </div>
+                                                <hr style="width:100%;" class="mt-0">
+                                            </div>
+                                            <form class="mt-0">
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-12">
+                                                        <label for="Government-id">Type of Government issued photo ID</label>
+                                                        <select class="custom-select-dropdown form-control" id="Government-id">
+                                                        <option>Passport</option>
+                                                        <option>Visa</option>
+                                                        <option>Others</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="Country">Country issuing photo ID</label>
+                                                        <select class="custom-select-dropdown form-control" id="Country">
+                                                    <option>Pakistan</option>
+                                                    <option>India</option>
+                                                    <option>Turkey</option>
+                                                    <option>China</option>
+                                                    </select>
+                                                    </div>
+                                                    <div class="form-group  form-group-lg col-md-6">
+                                                        <label for="photoid">Government photo ID number</label>
+                                                        <input type="password" class="form-control ud-inputs" id="photoid" placeholder="82202-37776-67">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-12">
+                                                        <label for="photo">Upload new copy of Government issued photo ID</label>
+
+                                                        <div class="input-group">
+                                                            <input id="photo" type="text" class="form-control ud-inputs" placeholder="Attach .pdf .tiff .jpg" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="s1">Security question 1</label>
+                                                        <select id="s1" class="custom-select-dropdown form-control">
+                                                    <option>What is your favourite color?</option>
+                                                    <option>what is your first dog name</option>
+                                                    <option>other</option>
+                                                    </select>
+                                                    </div>
+                                                    <div class="form-group  form-group-lg col-md-6">
+                                                        <label for="inputPassword4">Security answer 1</label>
+                                                        <input type="password" class="form-control ud-inputs" id="inputPassword4" placeholder="Black">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="s1">Security question 2</label>
+                                                        <select id="s1" class="custom-select-dropdown form-control">
+                                                    <option>What is your favourite season?</option>
+                                                    <option>what is your first dog name</option>
+                                                    <option>other</option>
+                                                    </select>
+                                                    </div>
+                                                    <div class="form-group  form-group-lg col-md-6">
+                                                        <label for="inputPassword4">Security answer 2</label>
+                                                        <input type="password" class="form-control ud-inputs" id="inputPassword4" placeholder="Money Hiest">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="password">Password</label>
+                                                        <input type="password" class="form-control ud-inputs" id="inputPassword4" placeholder="********">
+                                                    </div>
+                                                    <div class="form-group  form-group-lg col-md-6">
+                                                        <label>Two factor authentication</label><br>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+                                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input " type="checkbox" id="inlineCheckbox2" value="option2">
+                                                            <label class="form-check-label " for="inlineCheckbox2">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group form-group-lg col-md-6">
+                                                <button type="submit" class="btn text-light btn-lg btn-block" style="background-color: #35bee9;">Save changes</button>
+
+                                            </div>
+
+                                        </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                <!-- content section end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- account  tab section -->
+                    <div class="tab-pane fade show " id="account" role="tabpanel" aria-labelledby="account-tab">
+                        <div class="row protabsum">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <ul class="nav nav-fill justify-content-center" role="presentation">
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="accounts-tab" data-toggle="tab" href="#accounts" role="tab" aria-controls="accounts" aria-selected="true">Account</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="banking-tab" data-toggle="tab" href="#banking" role="tab" aria-controls="banking" aria-selected="true">Banking</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="payments-tab" data-toggle="tab" href="#payments" role="tab" aria-controls="payments" aria-selected="true">Linked payment methods</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row protabsum">
+                            <div class="col-12">
+                                <div class="tab-content" id="nav-tabContent">
+                                    <!-- accounts form -->
+                                    <div class="tab-pane fade show active" id="accounts" role="tabpanel" aria-labelledby="accounts-tab">
+                                        <div class="row d-flex justify-content-between protabsum w-100">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 mt-1 p-1">
+                                                <h4>Account</h4>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-right mt-1 p-1 d-xl-block d-md-none d-lg-block d-sm-none">
+                                                <i class="fa fa-pencil-square text-muted" aria-hidden="true"></i>
+                                            </div>
+                                            <hr style="width:100%;" class="mt-0">
+                                        </div>
+                                        <div class="row protabsum w-100">
+                                            <form class="mt-0">
+                                                <div class="form-row" style="margin-top: -35px;">
+                                                    <div class="form-group form-group-lg col-12">
+                                                        <label for="account-type">Account type</label>
+                                                        <select id="account-type" class="custom-select-dropdown form-control">
+                                                        <option>Personal</option>
+                                                        <option>Business</option>
+                                                        <option>Partner</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group form-group-lg col-md-6">
+                                                            <button type="submit" class="btn text-light btn-lg btn-block mt-2 mb-1 " style="background-color: #35bee9;">Save changes</button>
+
+                                                        </div>
+                                                        <p class="text-muted mt-1 mb-1">Changing account type may require additional ID and information. We'll contact you if we need more, so please check my email.</p>
+
+
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="row protabsum mt-5 w-100">
+                                            <div class="col-12  mb-2 w-100">
+                                                <h4>Disputes</h4>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12  mb-4">
+                                                <button class="btn btn-lg btn-block text-light" style="background-color: #35bee9;">View my Disputes</button>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12  mb-4">
+                                                <button class="btn btn-lg btn-block btn-outline-info">Submit a Dispute</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- account form end -->
+                                    <!-- bank form -->
+                                    <div class="tab-pane fade show " id="banking" role="tabpanel" aria-labelledby="banking-tab">
+
+                                        <div class="row d-flex justify-content-between protabsum w-100">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 mt-1 p-1">
+                                                <h4>Banking</h4>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-right mt-1 p-1 d-xl-block d-md-none d-lg-block d-sm-none">
+                                                <i class="fa fa-pencil-square text-muted" aria-hidden="true"></i>
+                                            </div>
+                                            <hr style="width:100%;" class="mt-0">
+                                        </div>
+                                        <div>
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="Banking">Bank</label>
+                                                        <select class="form-control custom-select-dropdown " id="Bank">
+                                                            <option>Meezan Bank</option>
+                                                            <option>BAJK</option>
+                                                            <option>Khyber Bank</option>
+                                                            <option>Dubai Islamic Bank</option>
+                                                            </select>
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="branchcode">Branch code</label>
+                                                        <input type="email" class="form-control ud-inputs" id="branchcode" placeholder="46000">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="accountnumber">Account number</label>
+                                                        <input type="email" class="form-control ud-inputs" id="branchcode" placeholder="460785468746578400">
+                                                    </div>
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <label for="branchcode">Accounts holder's name</label>
+                                                        <input type="email" class="form-control ud-inputs" id="branchcode" placeholder="Moheed Gillani">
+                                                    </div>
+                                                    <div class="form-group  form-group-lg col-md-12">
+                                                        <label>Make this account my preferred payment method</label><br>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+                                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input " type="checkbox" id="inlineCheckbox2" value="option2">
+                                                            <label class="form-check-label " for="inlineCheckbox2">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group form-group-lg col-md-6">
+                                                        <button type="submit" class="btn text-light btn-lg btn-block" style="background-color: #35bee9;">Save changes</button>
+
+                                                    </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- bank form end -->
+                                    <div class="tab-pane fade show " id="payments" role="tabpanel" aria-labelledby="payments-tab">
+                                        <div class="row d-flex justify-content-between protabsum ">
+                                            <ul class="nav nav-fill w-100" id="myTab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-muted suma" id="Visa-tab" data-toggle="tab" href="#Visa" role="tab" aria-controls="UnionPay" aria-selected="true">UnionPay</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-muted suma" id="visa-tab" data-toggle="tab" href="#Visa" role="tab" aria-controls="Visa" aria-selected="true">Visa</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-muted suma" href="#Visa" data-toggle="tab" href="#Visa" role="tab" aria-controls="UnionPay" aria-selected="true">Mastercard</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-muted suma" href="#Visa" data-toggle="tab" href="#Visa" role="tab" aria-controls="UnionPay" aria-selected="true">PayPal</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-muted suma" href="#Visa" data-toggle="tab" href="#Visa" role="tab" aria-controls="UnionPay" aria-selected="true">Alipay</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-muted suma" href="#Visa" data-toggle="tab" href="#Visa" role="tab" aria-controls="UnionPay" aria-selected="true">PayDome</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <hr style="width:100%;" class="mt-0">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <!-- unionpay form -->
+
+                                            <!-- union pay form end -->
+                                            <div class="tab-pane fade show active" id="Visa" role="tabpanel" aria-labelledby="visa-tab">
+                                                <div class="row protabsum mt-1">
+                                                    <form class="mt-0 w-100">
+                                                        <div class="form-row">
+                                                            <div class="form-group form-group-lg col-md-6">
+                                                                <label for="cardholdername">Cardholder's name</label>
+                                                                <input type="text" class="form-control ud-inputs" id="Cardholdername" placeholder="0909090980898">
+                                                            </div>
+                                                            <div class="form-group  form-group-lg col-md-6">
+                                                                <label for="CardNumber">Card number</label>
+                                                                <input type="text" class="form-control ud-inputs" id="CardNumber" placeholder="moheedgillani@webdeveloper.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group form-group-lg col-md-6">
+                                                                <label for="expirationdate">Expiration date</label>
+                                                                <input type="date" class="form-control ud-inputs" id="expiration date" placeholder="+923414148482">
+                                                            </div>
+                                                            <div class="form-group form-group-lg col-md-6">
+                                                                <label for="CVV">CVV security code</label>
+                                                                <input type="password" class="form-control ud-inputs" id="CVV" placeholder="0980">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group  form-group-lg col-md-12">
+                                                            <label><h5>Billing address</h5></label><br>
+                                                            <p class="text-muted">Same address as the account</p>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input " type="checkbox" id="inlineCheckbox2" value="option2">
+                                                                <label class="form-check-label " for="inlineCheckbox2">No</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group form-group-lg col-12">
+                                                                <label for="exampleInputEmail1">Address 1</label>
+                                                                <input type="email" class="form-control ud-inputs" id="exampleInputEmail1" placeholder="882 broadway Avenue">
+
+                                                            </div>
+                                                            <div class="form-group form-group-lg col-12">
+                                                                <label for="exampleInputPassword1">Address 2</label>
+                                                                <input type="password" class="form-control ud-inputs" id="exampleInputPassword1" placeholder="992 Stalk Hallow Road">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group form-group-lg col-md-6">
+                                                                <label for="Country">Country</label>
+                                                                <select class="form-control custom-select-dropdown " id="inputPassword4">
+                                                        <option>Pakistan</option>
+                                                        <option>India</option>
+                                                        <option>Turkey</option>
+                                                        <option>China</option>
+                                                        </select>
+                                                            </div>
+                                                            <div class="form-group form-group-lg col-md-6">
+                                                                <label for="city">City/Town/Suburb</label>
+                                                                <input type="text" class="form-control ud-inputs" id="Cardholdername" placeholder="Rawalpindi">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group  form-group-lg col-md-6">
+                                                                <label for="CardNumber">State/Province</label>
+                                                                <input type="text" class="form-control ud-inputs" id="CardNumber" placeholder="Punjab">
+                                                            </div>
+                                                            <div class="form-group form-group-lg col-md-6">
+                                                                <label for="expirationdate">Postal code</label>
+                                                                <input type="ZipCode" class="form-control ud-inputs" id="expiration date" placeholder="46000">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-group  form-group-lg col-md-12">
+
+                                                            <p class="text-muted">Make this my preferred payment method</p>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input " type="checkbox" id="inlineCheckbox2" value="option2">
+                                                                <label class="form-check-label " for="inlineCheckbox2">No</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row protabsum mt-5 w-100">
+                                                            <div class="col-lg-6 col-md-6 col-sm-12  mb-4 w-100">
+                                                                <button class="btn btn-lg btn-block text-light" style="background-color: #35bee9;">Save Changes</button>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-12  mb-4 w-100">
+                                                                <button class="btn btn-lg btn-block btn-outline-info btn-txt">Link another payment method</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- account tab section ended -->
+                    <div class="tab-pane fade show " id="transaction" role="tabpanel" aria-labelledby="transaction-tab">
+                        <div class="row protabsum">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <ul class="nav nav-fill justify-content-center" role="presentation">
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="landline-tab" data-toggle="tab" href="#all" role="tab" aria-controls="landline" aria-selected="true">Landline</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link suma" id="mobile-tab" data-toggle="tab" href="#all" role="tab" aria-controls="mobile" aria-selected="true">Mobile</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link  suma" id="electricity-tab" data-toggle="tab" href="#all" role="tab" aria-controls="idinfo" aria-selected="true">Electricity</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link  suma" id="gas-tab" data-toggle="tab" href="#gas" role="#all" aria-controls="gas" aria-selected="true">Gas</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link  suma" id="broadband-tab" data-toggle="tab" href="#all" role="tab" aria-controls="broadband" aria-selected="true">Broadband</a>
+                                    </li>
+                                    <li class="nav-item" id="myTab" role="tablist">
+                                        <a class="nav-link  suma" id="cabel-tab" data-toggle="tab" href="#all" role="tab" aria-controls="cabeltv" aria-selected="true">TV</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"><i class="fa fa-ellipsis-v text-info ml-5" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row  protabsum">
+                            <div class="tab-content w-100" id="myTabContent">
+                                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 w-100">
+
+
+                                        <table class="table table-borderless table-responsive-sm">
+                                            <thead style="background-color: #35bee9;" class="text-light w-100">
+                                                <tr>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Description</th>
+                                                    <th scope="col">Bill Id</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="accordion-toggle collapsed border-bottom" id="accordion1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                                                    <td>Feb 10 </td>
+                                                    <td>You haved paid the bill </td>
+                                                    <td>#092389</td>
+                                                    <td>Rs 9500.00</td>
+                                                    <td class="expand-button"> <i class="fa text-info ml-5" aria-hidden="true"></i></td>
+
+                                                </tr>
+                                                <tr class="hide-table-padding col-12 w-100">
+
+                                                    <td colspan="3">
+                                                        <div id="collapseOne" class="collapse in p-3 w-100">
+                                                            <hr style="width: 100%; height: 0.5px; background:#35bee9;">
+                                                            <h5 style="color: #36B8E2;"><img src="images/btc.PNG"><span class="ml-2">BTC Markets Pty,Ltd</span></h5>
+                                                            <hr style="width: 100%;">
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur accusantium ea odio laboriosam maxime culpa expedita voluptate minima! Incidunt tempora quibusdam eius! Explicabo
+                                                                amet modi, atque a ducimus molestiae!
+                                                            </p>
+                                                            <hr style="width: 100%;">
+                                                            <div class="row protabsum clearfix w-100">
+                                                                <div class="col-lg-3 col-sm-12">
+                                                                    <h5>Category</h5>
+                                                                    <h5 class="mt-1">ABN</h5>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-12 mt-1" style="text-align: left;">
+                                                                    <h5><i class="fa fa-line-chart text-info" aria-hidden="true"></i> Services/Finance Services</h5>
+                                                                    <h5 class="mt-1">90767687689445</h5>
+                                                                </div>
+                                                                <hr style="width: 100%;">
+                                                                <div class="row protabsum mt-0">
+                                                                    <div class="col-lg-4 col-sm-12 text-center">
+                                                                        <img src="images/phone.png">
+                                                                        <p class="mt-1">(02) 9022 4490</p>
+                                                                    </div>
+                                                                    <div class="col-lg-4 col-sm-12 text-center">
+                                                                        <img src="images/mail.png">
+                                                                        <p class="mt-1">Weblinerz@gmail.com</p>
+                                                                    </div>
+                                                                    <div class="col-lg-4 col-sm-12 text-center">
+                                                                        <img src="images/globe.png">
+                                                                        <p class="mt-1">www.welinerz.com</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                    </div>
+                                </div>
+                                </td>
+
+                                </tr>
+                                <tr class="accordion-toggle collapsed border-bottom" id="accordion2" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                    <td>Mar 12</td>
+                                    <td>You haved paid the bill</td>
+                                    <td>#003388</td>
+                                    <td>Rs 5800.00</td>
+                                    <td class="expand-button" id="tabbtn"> <i class="fa fa-ellipsis-v text-info ml-5" aria-hidden="true"></i></td>
+
+                                </tr>
+                                <tr class="hide-table-padding " id="table">
+
+                                    <td colspan="4">
+                                        <div id="collapseTwo" class="collapse in p-3">
+                                            <hr style="width: 100%; height: 0.5px; background:#35bee9;">
+                                            <h5 style="color: #36B8E2;"><img src="images/btc.PNG"><span class="ml-2">BTC Markets Pty,Ltd</span></h5>
+                                            <hr style="width: 100%;">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur accusantium ea odio laboriosam maxime culpa expedita voluptate minima! Incidunt tempora quibusdam eius! Explicabo amet modi, atque
+                                                a ducimus molestiae!
+                                            </p>
+                                            <hr style="width: 100%;">
+                                            <div class="row protabsum clearfix w-100">
+                                                <div class="col-lg-3 col-sm-12">
+                                                    <h5>Category</h5>
+                                                    <h5 class="mt-1">ABN</h5>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-12 mt-1" style="text-align: left;">
+                                                    <h5><i class="fa fa-line-chart text-info" aria-hidden="true"></i> Services/Finance Services</h5>
+                                                    <h5 class="mt-1">90767687689445</h5>
+                                                </div>
+                                                <hr style="width: 100%;">
+                                                <div class="row protabsum mt-0">
+                                                    <div class="col-lg-4 col-sm-12 text-center">
+                                                        <img src="images/phone.png">
+                                                        <p class="mt-1">(02)9022 4490</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-12 text-center">
+                                                        <img src="images/mail.png">
+                                                        <p class="mt-1">Email</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-12 text-center">
+                                                        <img src="images/globe.png">
+                                                        <p class="mt-1">Website</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        </td>
+
+                        </tr>
+                        <tr class="accordion-toggle collapsed border-bottom" id="accordion3" data-toggle="collapse" data-parent="#accordion1" href="#collapsethree">
+                            <td>Apr 20 </td>
+                            <td>You haved paid the bill </td>
+                            <td>#092389</td>
+                            <td>Rs 6000.00</td>
+
+                            <td class="expand-button"> <i class="fa fa-ellipsis-v text-info ml-5" aria-hidden="true"></i></td>
+
+
+
+                        </tr>
+                        <tr class="hide-table-padding">
+
+                            <td colspan="3">
+                                <div id="collapsethree" class="collapse in p-3 w-100">
+                                    <hr style="width: 100%; height: 0.5px; background:#35bee9;">
+                                    <h5 style="color: #36B8E2;"><img src="images/btc.PNG"><span class="ml-2">BTC Markets Pty,Ltd</span></h5>
+                                    <hr style="width: 100%;">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur accusantium ea odio laboriosam maxime culpa expedita voluptate minima! Incidunt tempora quibusdam eius! Explicabo amet modi, atque a ducimus
+                                        molestiae!
+                                    </p>
+                                    <hr style="width: 100%;">
+                                    <div class="row protabsum clearfix w-100">
+                                        <div class="col-lg-3 col-sm-12">
+                                            <h5>Category</h5>
+                                            <h5 class="mt-1">ABN</h5>
+                                        </div>
+                                        <div class="col-lg-9 col-sm-12 mt-1" style="text-align: left;">
+                                            <h5><i class="fa fa-line-chart text-info" aria-hidden="true"></i> Services/Finance Services</h5>
+                                            <h5 class="mt-1">90767687689445</h5>
+                                        </div>
+                                        <hr style="width: 100%;">
+                                        <div class="row protabsum mt-0">
+                                            <div class="col-lg-4 col-sm-12 text-center">
+                                                <img src="images/phone.png">
+                                                <p class="mt-1">(02)9022 4490</p>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-12 text-center">
+                                                <img src="images/mail.png">
+                                                <p class="mt-1">Email</p>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-12 text-center">
+                                                <img src="images/globe.png">
+                                                <p class="mt-1">Website</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                </td>
+
+                </tr>
+                <tr class="accordion-toggle collapsed border-bottom" id="accordion4" data-toggle="collapse" data-parent="#accordion4" href="#collapsefour">
+                    <td>May 12 </td>
+                    <td>You haved paid the bill </td>
+                    <td>#092389</td>
+                    <td>Rs 6000.00</td>
+                    <td class="expand-button"> <i class="fa fa-ellipsis-v text-info ml-5" aria-hidden="true"></i></td>
+
+                </tr>
+                <tr class="hide-table-padding">
+
+                    <td colspan="3">
+                        <div id="collapsefour" class="collapse in p-3 w-100">
+                            <hr style="width: 100%; height: 0.5px; background:#35bee9;">
+                            <h5 style="color: #36B8E2;"><img src="images/btc.PNG"><span class="ml-2">BTC Markets Pty,Ltd</span></h5>
+                            <hr style="width: 100%;">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur accusantium ea odio laboriosam maxime culpa expedita voluptate minima! Incidunt tempora quibusdam eius! Explicabo amet modi, atque a ducimus molestiae!
+                            </p>
+                            <hr style="width: 100%;">
+                            <div class="row protabsum clearfix w-100">
+                                <div class="col-lg-3 col-sm-12">
+                                    <h5>Category</h5>
+                                    <h5 class="mt-1">ABN</h5>
+                                </div>
+                                <div class="col-lg-9 col-sm-12 mt-1" style="text-align: left;">
+                                    <h5><i class="fa fa-line-chart text-info" aria-hidden="true"></i> Services/Finance Services</h5>
+                                    <h5 class="mt-1">90767687689445</h5>
+                                </div>
+                                <hr style="width: 100%;">
+                                <div class="row protabsum mt-0">
+                                    <div class="col-lg-4 col-sm-12 text-center">
+                                        <img src="images/phone.png">
+                                        <p class="mt-1">(02)9022 4490</p>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 text-center">
+                                        <img src="images/mail.png">
+                                        <p class="mt-1">Email</p>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 text-center">
+                                        <img src="images/globe.png">
+                                        <p class="mt-1">Website</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        </td>
+
+        </tr>
+        <tr class="accordion-toggle collapsed border-bottom" id="accordion5" data-toggle="collapse" data-parent="#accordion5" href="#collapsefive">
+            <td>Jun 12 </td>
+            <td>You haved paid the bill </td>
+            <td>#022356</td>
+            <td>Rs 2400.00</td>
+            <td class="expand-button"> <i class="fa fa-ellipsis-v text-info ml-5" aria-hidden="true"></i></td>
+
+        </tr>
+        <tr class="hide-table-padding">
+
+            <td colspan="3">
+                <div id="collapsefive" class="collapse in p-3 w-100">
+                    <hr style="width: 100%; height: 0.5px; background:#35bee9;">
+                    <h5 style="color: #36B8E2;"><img src="images/btc.PNG"><span class="ml-2">BTC Markets Pty,Ltd</span></h5>
+                    <hr style="width: 100%;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur accusantium ea odio laboriosam maxime culpa expedita voluptate minima! Incidunt tempora quibusdam eius! Explicabo amet modi, atque a ducimus molestiae!
+                    </p>
+                    <hr style="width: 100%;">
+                    <div class="row protabsum clearfix w-100">
+                        <div class="col-lg-3 col-sm-12">
+                            <h5>Category</h5>
+                            <h5 class="mt-1">ABN</h5>
+                        </div>
+                        <div class="col-lg-9 col-sm-12 mt-1" style="text-align: left;">
+                            <h5><i class="fa fa-line-chart text-info" aria-hidden="true"></i> Services/Finance Services</h5>
+                            <h5 class="mt-1">90767687689445</h5>
+                        </div>
+                        <hr style="width: 100%;">
+                        <div class="row protabsum mt-0">
+                            <div class="col-lg-4 col-sm-12 text-center">
+                                <img src="images/phone.png">
+                                <p class="mt-1">(02)9022 4490</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 text-center">
+                                <img src="images/mail.png">
+                                <p class="mt-1">Email</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 text-center">
+                                <img src="images/globe.png">
+                                <p class="mt-1">Website</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    </td>
+
+    </tr>
+
+
+
+    </tbody>
+    </table>
+
+
+
+    </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
+    </div>
+    </div>
+    <!-- transaction tab section ended -->
+    <div class="tab-pane fade show " id="reward" role="tabpanel" aria-labelledby="reward-tab">
+        <div class="row protabsum">
+            <div class="col-12">
+                <h5 class="p-3">Rewards</h5>
+            </div>
+        </div>
+        <div class="row protabsum mt-5">
+            <div class="col-lg-5 col-md-7 col-sm-12 mt-1">
+                <div class="card bg-transparent text-white">
+                    <img src="images/rcard.png" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"><img src="images/sidebar-icons/user.png"> Total points</h5>
+                        <h3 class="card-title">9,322</h3>
+                        <p class="card-text">5000 points expiring on 14 Feb</p>
+                        <a href="#" class="text-light">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row protabsum " style="margin-top: -2px; margin-left: 12px;">
+                <p>Add a Reward plan to your ReCharge account and earn on every payment.</p>
+                <form class="w-100">
+                    <div class="form-row">
+                        <div class="form-group form-group-lg col-md-6">
+                            <label for="city">Membership</label>
+                            <select class="form-control custom-select-dropdown">
+                                        <option>Emirates Skyward</option>
+                                        <option>Emirates Skyward</option>
+                                        <option>Emirates Skyward</option>
+                                        </select>
+                        </div>
+                        <div class="form-group  form-group-lg col-md-6">
+                            <label for="CardNumber">Membership number</label>
+                            <input type="text" class="form-control ud-inputs" id="CardNumber" placeholder="A123456">
+                        </div>
+                        <div class="form-group  form-group-lg col-md-12 ">
+                            <h5>ReCharge Deals newsletter</h5>
+                            <div class="form-check form-check-inline ">
+                                <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input ml-5" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label " for="inlineCheckbox2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group form-group-lg col-md-6">
+                            <button class="btn btn-lg btn-block text-light" style="background-color: #35bee9; border-radius: 0px;">Save changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- main nav tabs end -->
+    </div>
+    <!-- main side coloumn section ended -->
+    <!-- dashobard colomn ended -->
+    </div>
+    <!-- summary tab section -->
+    </div>
+    <!-- Summary-tab end -->
+    <!-- row for a whole page end here -->
+    </div>
+    <!-- container fluid for a whole page ended -->
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+            var hash = $(e.target).attr("href");
+            $('.nav a').filter('a[href="' + hash + '"]').tab('show');
+        });
+    </script>
+
+    <script type="text/javascript">
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'doughnut',
+            // The data for our dataset
+            data: {
+                datasets: [{
+                    label: "Total balance Rs 1995",
+                    backgroundColor: ["brown", "orange", "indigo", "orange", "green", ],
+                    data: [100, 80, 100, 80, 50],
+                    title: {
+                        display: true,
+                        text: 'Total Balance Rs:1049.98'
+                    },
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('#table').click(function() {
+            $('#tabbtn').css({
+                'display': 'Block'
+            });
+        });
+    </script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+
+</html>

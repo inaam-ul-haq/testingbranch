@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7.5" viewBox="0 0 15 7.5">
+  <g id="down-arrow" transform="translate(0 -127.245)">
+    <g id="_x31_0_34_" transform="translate(0 127.244)">
+      <g id="Group_1" data-name="Group 1">
+        <path id="Path_1" data-name="Path 1" d="M14.816,127.4a.7.7,0,0,0-.888,0L7.5,133.44,1.071,127.4a.7.7,0,0,0-.888,0,.488.488,0,0,0,0,.764l6.841,6.424a.681.681,0,0,0,.475.153.68.68,0,0,0,.475-.153l6.841-6.425A.488.488,0,0,0,14.816,127.4Z" transform="translate(0 -127.244)" fill="rgba(35,31,32,0.3)"/>
+      </g>
+    </g>
+  </g>
+</svg>
